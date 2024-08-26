@@ -1,4 +1,4 @@
-package model;
+package ec.edu.uce.examenDLL.demo.model;
 
 import jakarta.persistence.*;
 
@@ -20,11 +20,11 @@ public class Task {
     private LocalDateTime fecha;
 
     public Task(){
-
+        this.fecha = LocalDateTime.now();
     }
 
-    public Task(Long id, String title, String description, String estado, LocalDateTime fecha) {
-        this.id = id;
+    public Task( String title, String description, String estado, LocalDateTime fecha) {
+
         this.title = title;
         this.description = description;
         this.estado = estado;

@@ -1,6 +1,6 @@
-package repository;
+package ec.edu.uce.examenDLL.demo.repository;
 
-import model.Task;
+import ec.edu.uce.examenDLL.demo.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

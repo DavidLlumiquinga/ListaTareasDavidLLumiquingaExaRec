@@ -1,9 +1,9 @@
-package service;
+package ec.edu.uce.examenDLL.demo.service;
 
-import model.Task;
+import ec.edu.uce.examenDLL.demo.model.Task;
+import ec.edu.uce.examenDLL.demo.repository.ITasks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ITasks;
 
 import java.util.List;
 
@@ -21,6 +21,7 @@ public class TasksService {
     public Task crearTarea(Task tarea) {
         return tareaRepository.save(tarea);
     }
+
 
     public List<Task> listarTareas() {
         return tareaRepository.findAll();
