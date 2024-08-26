@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import service.TasksService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -18,28 +17,28 @@ public class TaskController {
         this.tareaService = tareaService;
     }
 
-   
-    public ArrayList<Task> crearTarea(Task tarea) {
+
+    public Task crearTarea(Task tarea) {
         Task nuevaTarea = tareaService.crearTarea(tarea);
         return nuevaTarea;
     }
 
 
-    public ArrayList<List<Task>> listarTareas() {
+    public List<Task> listarTareas() {
         List<Task> tareas = tareaService.listarTareas();
-        return new (tareas);
+        return (tareas);
     }
 
 
-    public ArrayList<List<Task>> listarTareasPorEstado(String estado) {
+    public List<Task> listarTareasPorEstado(String estado) {
         List<Task> tareas = tareaService.listarTareasPorEstado(estado);
-        return new (tareas);
+        return (tareas);
     }
 
 
-    public ArrayList<Task> actualizarTarea( Long id, Task tarea) {
+    public Task actualizarTarea(Long id, Task tarea) {
         Task tareaActualizada = tareaService.actualizarTarea(id, tarea);
-        return new (tareaActualizada);
+        return (tareaActualizada);
     }
 
 
